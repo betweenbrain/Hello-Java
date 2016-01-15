@@ -7,7 +7,7 @@ public class Main {
         // Int has width of 32 in memory, underscores for readability
         int minInt = -2_147_483_648;
         int maxInt = 2_147_483_647;
-        int myTotal = (minInt / 2);
+        int myTotal = (minInt / 2); // no need to cast
         System.out.println(myTotal);
 
         // Byte has width of 8 in memory, fastest
@@ -19,9 +19,11 @@ public class Main {
         // Short has width of 16 in memory
         short minShort = -32_768;
         short maxShort = 32_767;
+        short newShort = (short) (minByte / 2); // must cast as short
 
         // Long has width of 64, note "L" at end
         long minLong = -9_223_372_036_854_775_808L;
         long maxLong = 9_223_372_036_854_775_807L;
+        long newLong = (minLong / 2); // no need to cast
     }
 }
